@@ -18,9 +18,22 @@ $("#Btn").click(function () {//给web页面的按钮绑定点击事件，通过�
 	});
 });
 // 复制图文发送请求
-$("#Btn2").click(function () {//给web页面的按钮绑定点击事件，通过点击事件来控制发送消息
+$("#Btn2").click(function () {
     sendMessageToContentScript({cmd:'copy_article', value:'Copy article start！'}, function(response)
 	{
 	    console.log('来自content的回复：'+response);
 	});
 });
+// 设置按钮点击打开插件设置页面
+$("#Btn3").click(function () {
+	var opening = chrome.runtime.openOptionsPage();
+	opening.then(onOpened, onError);
+    function onOpened() {
+  		console.log(`Options page opened`);
+	}
+
+	function onError(error) {
+	    console.log(`Error: ${error}`);
+	}
+});
+
