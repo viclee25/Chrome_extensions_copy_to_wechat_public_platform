@@ -1,0 +1,5 @@
+# Chrome_extensions_copy_to_wechat_public_platform
+这是一个chrome插件
+将html内容复制到剪切板再粘贴到微信公众平台中
+转换微信文章格式
+调整文字大小
